@@ -35,9 +35,9 @@
 </head>
 
 <body class="font-Lexend mt-6">
-    <header class=" bg-background sticky top-0  shadow-md">
+    <header  class=" bg-background sticky top-0  shadow-md">
         <nav class="w-10/12 mx-auto  flex justify-between items-center  lg:p-5">
-            <a class=" bg-primary border rounded-lg px-6 lg:px-8 py-3 lg:text-xl font-semibold" href="">Blog</a>
+            <button id="blog-btn" class=" bg-primary border rounded-lg px-6 lg:px-8 py-3 lg:text-xl font-semibold" >Blog</button>
             <div class="flex flex-col md:flex-row justify-between items-center md:gap-3"> <img src="./assets/logo.png"
                     alt="">
                 <h2 class="lg:text-xl lg:font-semibold">Donate Bangladesh</h2>
@@ -76,9 +76,7 @@
                 <input id="noakhali-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
                 <button id="noakhali-btn" class="btn w-full bg-primary hover:bg-primary text-xl font-semibold" >Donate Now</button>
             </div>
-            <p id="input-error" class="hidden text-red-500 text-xs mt-1 ">
-                Invalid amount!
-            </p>
+            
 
         </section>
         <!-- card-2 -->
@@ -101,9 +99,7 @@
                     making a real difference. Please consider donating today to assist those in urgent need.</p>
                 <input id="feni-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
                 <button id="feni-btn" class="btn w-full bg-primary hover:bg-primary text-xl font-semibold" >Donate Now</button>
-                <p id="input-erro" class="hidden text-red-500 text-xs mt-1 ">
-                    Invalid amount!
-                </p>
+                
             </div>
 
         </section>
@@ -129,9 +125,6 @@
                 <input id="quota-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
                 <button id="quota-btn" class="btn w-full bg-primary hover:bg-primary text-xl font-semibold ">Donate
                     Now</button>
-                <p id="input-error" class="hidden text-red-500 text-xs mt-1  ">
-                    Invalid amount!
-                </p>
             </div>
 
         </section>
@@ -156,10 +149,11 @@
             </div>
         </div>
     </dialog>
+    
 
-    <!-- history -->
      
     <script src="./js/index.js"></script>
+    <script src="./js/page.js"></script>
 </body>
 
 </html>

@@ -37,6 +37,7 @@ function validateDonationInput(inputValue, balance) {
 
 
 
+
 // Donation button clicked
 // Card-1
 const currentDateTime = new Date();
@@ -189,3 +190,6 @@ donateBtn.addEventListener('click', function(){
 
     const historyItem = getRemoveElementById('history-item');
 })
+
+
+// page routing
