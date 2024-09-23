@@ -44,18 +44,18 @@
             </div>
             <div class="flex justify-center md:items-center md:gap-3 md:text-xl lg:font-medium">
                 <img src="./assets/coin.png" alt="">
-                <p id="my-balance">5500</p>
+                <p id="my-balance">5500.00</p>
                 <span>BDT</span>
             </div>
         </nav>
         <!-- banner section -->
         <section class="flex flex-row justify-center items-center my-10 pb-10 gap-3">
-            <button class="btn sm:btn-md lg:btn-lg bg-primary hover:bg-primary ">Responsive</button>
-            <button class="btn sm:btn-md  lg:btn-lg bg-secondary">Responsive</button>
+            <button id="donate-tab" class="btn sm:btn-md lg:btn-lg bg-primary px-10 hover:bg-primary ">Donation</button>
+            <button id="history-tab" class="btn sm:btn-md  lg:btn-lg bg-secondary px-10">History</button>
         </section>
 
     </header>
-    <main class="w-10/12 mx-auto space-y-20">
+    <main id="main-section" class="w-10/12 mx-auto space-y-20">
         <!-- card-1 -->
         <section class="flex flex-col md:flex-row gap-6 items-center">
             <div class="md:w-1/2">
@@ -68,13 +68,13 @@
                     <p id="donate-balance">0</p>
                     <span>BDT</span>
                 </div>
-                <h2 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
+                <p id="noakhali-title" class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</p>
                 <p class="font-light"> The recent floods in Noakhali have caused significant damage to homes
                     infrastructure. Your donation will help provide essential supplies and to those affected by this
                     disaster. Every contribution, big or small, makes difference. Please join us in supporting the
                     relief efforts and making a positive impact on the lives of those in need.</p>
                 <input id="noakhali-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-                <button id="noakhali-btn" class="btn w-full bg-primary hover:bg-primary text-xl font-semibold">Donate Now</button>
+                <button id="noakhali-btn" class="btn w-full bg-primary hover:bg-primary text-xl font-semibold" onclick="my_modal_1.showModal()">Donate Now</button>
             </div>
             <p id="input-error" class="hidden text-red-500 text-xs mt-1 ">
                 Invalid amount!
@@ -93,14 +93,14 @@
                     <p id="feni-donate-balance">600</p>
                     <span>BDT</span>
                 </div>
-                <h2 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
-                <p class="font-light"> The recent floods in Feni have devastated local communities, leading to severe
+                <h2 id="feni-title" class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
+                <p  class="font-light"> The recent floods in Feni have devastated local communities, leading to severe
                     disruption and loss. Your generous donation will help provide immediate aid, including food, clean
                     water, and medical supplies, to those affected by this calamity. Together, we can offer crucial
                     support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards
                     making a real difference. Please consider donating today to assist those in urgent need.</p>
                 <input id="feni-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-                <button id="feni-btn" class="btn w-full bg-primary hover:bg-primary text-xl font-semibold">Donate Now</button>
+                <button id="feni-btn" class="btn w-full bg-primary hover:bg-primary text-xl font-semibold" onclick="my_modal_1.showModal()">Donate Now</button>
                 <p id="input-erro" class="hidden text-red-500 text-xs mt-1 ">
                     Invalid amount!
                 </p>
@@ -119,7 +119,7 @@
                     <p id="quota-donate-balance">2400</p>
                     <span>BDT</span>
                 </div>
-                <h2 class="text-xl font-bold">Aid for Injured in the Quota Movement</h2>
+                <h2 id="quota-title" class="text-xl font-bold">Aid for Injured in the Quota Movement</h2>
                 <p class="font-light"> The recent Quota movement has resulted in numerous injuries and significant
                     hardship for many individuals. Your support is crucial in providing medical assistance,
                     rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that
@@ -127,7 +127,7 @@
                     donation plays a vital role in alleviating their suffering and aiding in their recovery. Please
                     consider making a donation to support these brave individuals in their time of need.</p>
                 <input id="quota-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-                <button id="quota-btn" class="btn w-full bg-primary hover:bg-primary text-xl font-semibold " >Donate
+                <button id="quota-btn" class="btn w-full bg-primary hover:bg-primary text-xl font-semibold " onclick="my_modal_1.showModal()">Donate
                     Now</button>
                 <p id="input-error" class="hidden text-red-500 text-xs mt-1  ">
                     Invalid amount!
@@ -135,7 +135,13 @@
             </div>
 
         </section>
+
+        
     </main>
+    <div class="hidden flex flex-col justify-end items-center " id="history-item">
+
+    </div>
+
     <!-- Open the modal using ID.showModal() method -->
     <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
     <dialog id="my_modal_1" class="modal">
@@ -151,6 +157,25 @@
             </div>
         </div>
     </dialog>
+
+    <!-- history -->
+     
+
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+
     <script src="./js/index.js"></script>
 </body>
 
