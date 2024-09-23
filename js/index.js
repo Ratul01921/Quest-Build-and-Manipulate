@@ -16,6 +16,11 @@ function getAddElementById(id) {
     const addChild = document.getElementById(id).classList.remove('hidden');
 }
 
+function showModal() {
+    const modal = document.getElementById('my_modal_1');
+    modal.showModal(); // Opens the modal
+}
+
 // // Validate donation input
 function validateDonationInput(inputValue, balance) {
     if (inputValue === '' || isNaN(inputValue) || inputValue <= 0) {
@@ -67,9 +72,7 @@ document.getElementById('noakhali-btn').addEventListener('click', function () {
     const historyContainer = document.getElementById('history-item');
     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 
-
-    // validation
-
+    showModal();
     
 })
 
@@ -103,6 +106,7 @@ document.getElementById('feni-btn').addEventListener('click', function () {
         `
     const historyContainer = document.getElementById('history-item');
     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+    showModal(); 
 })
 
 // Card-3
@@ -134,6 +138,7 @@ document.getElementById('quota-btn').addEventListener('click', function () {
         `
     const historyContainer = document.getElementById('history-item');
     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+    showModal(); 
 })
 
 
