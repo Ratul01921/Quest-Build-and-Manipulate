@@ -16,12 +16,27 @@ function getAddElementById(id) {
     const addChild = document.getElementById(id).classList.remove('hidden');
 }
 
+// // Validate donation input
+function validateDonationInput(inputValue, balance) {
+    if (inputValue === '' || isNaN(inputValue) || inputValue <= 0) {
+        alert('Please enter a valid donation amount.');
+        return false;
+    }
+    if (inputValue > balance) {
+        alert('Donation amount exceeds your account balance.');
+        return false;
+    }
+    return true;
+}
+
+
 
 
 // Donation button clicked
 // Card-1
 const currentDateTime = new Date();
 document.getElementById('noakhali-btn').addEventListener('click', function () {
+    
     const noakhliInput = getMoneyByIdInputValue('noakhali-input');
     const donateBalance = getMoneyByIdTextValue('donate-balance');
     const noakhliTotalDonateBalance = noakhliInput + donateBalance;
@@ -29,6 +44,10 @@ document.getElementById('noakhali-btn').addEventListener('click', function () {
     document.getElementById('donate-balance').innerText = noakhliTotalDonateBalance;
 
     const myBalance = getMoneyByIdTextValue('my-balance');
+
+    if (!validateDonationInput(noakhliInput, myBalance)) 
+        return;
+    
 
     const currentBalance = myBalance - noakhliInput;
     document.getElementById('my-balance').innerText = currentBalance;
@@ -47,6 +66,11 @@ document.getElementById('noakhali-btn').addEventListener('click', function () {
         `
     const historyContainer = document.getElementById('history-item');
     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+
+
+    // validation
+
+    
 })
 
 
@@ -60,6 +84,9 @@ document.getElementById('feni-btn').addEventListener('click', function () {
     document.getElementById('feni-donate-balance').innerText = feniTotalDonateBalance;
 
     const myBalance = getMoneyByIdTextValue('my-balance');
+
+    if(!validateDonationInput(feniInput, myBalance)) return;
+
     const currentBalance = myBalance - feniInput;
     document.getElementById('my-balance').innerText = currentBalance;
 
@@ -88,6 +115,8 @@ document.getElementById('quota-btn').addEventListener('click', function () {
     document.getElementById('quota-donate-balance').innerText = quotaTotalDonateBalance;
 
     const myBalance = getMoneyByIdTextValue('my-balance');
+
+    if(!validateDonationInput (quotaInput, myBalance)) return;
 
     const currentBalance = myBalance - quotaInput;
     document.getElementById('my-balance').innerText = currentBalance;
@@ -136,6 +165,22 @@ historyBtn.addEventListener('click', function () {
 
 // Donation button clicked
 
-// .donateBtn.addEventListener('click', function(){
+donateBtn.addEventListener('click', function(){
 
-// })
+    donateBtn.classList.remove(
+        'bg-secondary',
+    );
+    donateBtn.classList.add(
+        'bg-primary', 'hover:bg-primary'
+    );
+    historyBtn.classList.remove(
+        'bg-primary', 'hover:bg-primary'
+    );
+    historyBtn.classList.add(
+        'bg-secondary', 'hover:secondary'
+    );
+
+    const mainSection = getAddElementById('main-section');
+
+    const historyItem = getRemoveElementById('history-item');
+})
